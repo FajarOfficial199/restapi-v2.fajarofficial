@@ -189,7 +189,7 @@
         {
           "name": "Jkt48 News",
           "desc": "JKT48 News",
-          "path": "/info/jkt48news?lang=id"
+          "path": "/info/jkt48news"
         }
       ]
     },
