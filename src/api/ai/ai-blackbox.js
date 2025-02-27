@@ -2,27 +2,30 @@ const axios = require("axios");
 
 module.exports = function(app) {
 async function fetchBlackboxAI(prompt) {
-    try {
-        const response = await axios.post("https://www.blackbox.ai/api/chat", {
+        const url = "https://www.blackbox.ai/api/chat";
+        const headers = {
+            "Content-Type": "application/json",
+            "User-Agent": "Mozilla/5.0"
+        };
+
+        const data = {
             messages: [{ role: "user", content: prompt }],
             agentMode: {},
             maxTokens: 1024
-        }, {
-            headers: {
-                "Content-Type": "application/json",
-                "User-Agent": "Mozilla/5.0"
-            }
-        });
+        };
 
-        if (response.data && response.data.messages) {
-            return response.data.messages;
-        } else {
+        try {
+            const response = await axios.post(url, data, { headers });
+
+            if (response.data && response.data.messages) {
+                return response.data.messages;
+            } else {
+                return null;
+            }
+        } catch (error) {
+            console.error("Error fetching Blackbox AI:", error);
             return null;
         }
-    } catch (error) {
-        console.error("Error fetching Blackbox AI:", error);
-        return null;
-    }
 }
 
     const data = {
@@ -77,25 +80,25 @@ async function fetchBlackboxAI(prompt) {
 }
 
 app.get("/ai/blackbox", async (req, res) => {
-    const prompt = req.query.prompt;
+        const prompt = req.query.prompt;
 
-    if (!prompt) {
-        return res.status(400).json({ error: "Masukkan prompt untuk Blackbox AI!" });
-    }
+        if (!prompt) {
+            return res.status(400).json({ error: "Masukkan prompt untuk Blackbox AI!" });
+        }
 
-    const result = await fetchBlackboxAI(prompt);
+        const result = await fetchBlackboxAI(prompt);
 
-    if (result) {
-        res.json({
-            status: "succes",
-            prompt: prompt,
-            response: result.map(msg => ({
-                role: msg.role,
-                content: msg.content
-            }))
-        });
-    } else {
-        res.json({ creator: "Fajar Official", error: "Gagal mendapatkan respons dari Blackbox AI." });
-    }
-});
+        if (result) {
+            res.json({
+                status: "success",
+                prompt: prompt,
+                response: result.map(msg => ({
+                    role: msg.role,
+                    content: msg.content
+                }))
+            });
+        } else {
+            res.json({ creator: "Fajar Official", error: "Gagal mendapatkan respons dari Blackbox AI." });
+        }
+    });
 }
