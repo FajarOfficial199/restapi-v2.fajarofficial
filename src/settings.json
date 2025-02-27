@@ -32,52 +32,52 @@
       "items": [
         {
           "name": "Xnxx",
-          "desc": "Xnxx Download",
+          "desc": "GET Xnxx Download",
           "path": "/downloader/xnxx?url="
         },
         {
           "name": "MediaFire",
-          "desc": "Mediafire Download",
+          "desc": "GET Mediafire Download",
           "path": "/downloader/mediafire?url="
         },
         {
-          "name": "Youtube",
-          "desc": "Yotube Downloader With [ TYPE & QUALITY ]",
+          "name": "Youtube With [ MP4 & MP3 & QUALITY ]",
+          "desc": "GET Yotube Downloader With [ MP3 & MP4 & QUALITY ] selection",
           "path": "/downloader/youtube?url=&type=&quality="
         },
         {
           "name": "Sfile Mobile",
-          "desc": "Sfile Mobile Downloader",
+          "desc": "GET Sfile Mobile Downloader",
           "path": "/downloader/sfile?url="
         },
         {
           "name": "Twitter",
-          "desc": "Twitter Downloader",
+          "desc": "GET Twitter Downloader",
           "path": "/downloader/twitter?url="
         },
         {
           "name": "Capcut",
-          "desc": "Capcut Downloader",
+          "desc": "GET Capcut Downloader",
           "path": "/downloader/capcut?url="
         },
         {
           "name": "Tiktok",
-          "desc": "Tiktok Downloader",
+          "desc": "GET Tiktok Downloader",
           "path": "/downloader/tiktok?url="
         },
         {
           "name": "Instragam",
-          "desc": "Instragam Downloader",
+          "desc": "GET Instragam Downloader",
           "path": "/downloader/igdl?url="
         },
         {
           "name": "Facebook",
-          "desc": "Facebook Downloader",
+          "desc": "GET Facebook Downloader",
           "path": "/downloader/facebook?url="
         },
         {
           "name": "Spotify",
-          "desc": "Spotify Downloader",
+          "desc": "GET Spotify Downloader",
           "path": "/downloader/spotify?url="
         }
       ]
@@ -122,17 +122,17 @@
       "items": [
         {
           "name": "Chatgpt [ Openai ]",
-          "desc": "Chatpt openai",
+          "desc": "GET Chatpt openai",
           "path": "/ai/chatgpt?text="
         },
         {
           "name": "LuminAI",
-          "desc": "Talk with luminai",
+          "desc": "GET Talk with luminai",
           "path": "/ai/luminai?text="
         },
         {
           "name": "HydroMind",
-          "desc": "Talk with hydromind",
+          "desc": "GET Talk with hydromind",
           "path": "/ai/hydromind?text=&model=",
           "innerDesc": "See the list of supported AI models here: https://mind.hydrooo.web.id"
         }
@@ -143,7 +143,7 @@
       "items": [
         {
           "name": "Blue Archive",
-          "desc": "Blue Archive Random Images",
+          "desc": " GET Blue Archive Random Images",
           "path": "/random/ba"
         }
       ]
@@ -153,27 +153,27 @@
       "items": [
         {
           "name": "Playstore",
-          "desc": "Playstore Search",
+          "desc": "GET Playstore Search",
           "path": "/search/playstore?nama="
         },
         {
           "name": "YouTube",
-          "desc": "Video search",
+          "desc": "GET Video search",
           "path": "/search/youtube?q="
         },
         {
           "name": "Instragam",
-          "desc": "Instragam Search",
+          "desc": "GET Instragam Search",
           "path": "/search/ig?query="
         },
         {
           "name": "Tiktok",
-          "desc": "Tiktok Search",
+          "desc": "GET Tiktok Search",
           "path": "/search/tiktok?username="
         },
         {
           "name": "Spotify",
-          "desc": "Spotify Search",
+          "desc": "GET Spotify Search",
           "path": "/search/spotify?q=&apikey"
         }
       ]
@@ -183,17 +183,17 @@
       "items": [
         {
           "name": "Npm",
-          "desc": "Npm Stalker",
+          "desc": "GET Npm Stalker",
           "path": "/stalker/npm?package="
         },
         {
           "name": "Github",
-          "desc": "Github Stalker",
+          "desc": "GET Github Stalker",
           "path": "/stalker/github?username="
         },
         {
           "name": "Tiktok",
-          "desc": "Tiktok Stalker",
+          "desc": "GET Tiktok Stalker",
           "path": "/stalker/tiktok?username="
         }
       ]
@@ -203,12 +203,12 @@
       "items": [
         {
           "name": "Gta SanAndreas Samp",
-          "desc": "Status Samp Server",
+          "desc": "GET Status Samp Server",
           "path": "/status/server/samp?ip=&port="
        },
        {
           "name": "Minecraft",
-          "desc": "Status Server Minecraft",
+          "desc": "GET Status Server Minecraft",
           "path": "/status/server/minecraft?host=&port="
         }
       ]
