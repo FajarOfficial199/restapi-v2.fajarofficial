@@ -2,15 +2,28 @@ const axios = require("axios");
 
 module.exports = function(app) {
 async function fetchBlackboxAI(prompt) {
-    const url = "https://www.blackbox.ai/api/chat";
-    const headers = {
-        "authority": "www.blackbox.ai",
-        "accept": "*/*",
-        "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-        "content-type": "application/json",
-        "origin": "https://www.blackbox.ai",
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
-    };
+    try {
+        const response = await axios.post("https://www.blackbox.ai/api/chat", {
+            messages: [{ role: "user", content: prompt }],
+            agentMode: {},
+            maxTokens: 1024
+        }, {
+            headers: {
+                "Content-Type": "application/json",
+                "User-Agent": "Mozilla/5.0"
+            }
+        });
+
+        if (response.data && response.data.messages) {
+            return response.data.messages;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error("Error fetching Blackbox AI:", error);
+        return null;
+    }
+}
 
     const data = {
         "messages": [{ "role": "user", "content": prompt, "id": "54lcaEJ" }],
@@ -70,23 +83,19 @@ app.get("/ai/blackbox", async (req, res) => {
         return res.status(400).json({ error: "Masukkan prompt untuk Blackbox AI!" });
     }
 
-    try {
-        const result = await fetchBlackboxAI(prompt);
+    const result = await fetchBlackboxAI(prompt);
 
-        // Format respons agar lebih rapi
-        if (result.messages) {
-            return res.json({
-                prompt: prompt,
-                response: result.messages.map((msg) => ({
-                    role: msg.role,
-                    content: msg.content
-                }))
-            });
-        }
-
-        res.json({ error: "Tidak ada respons dari Blackbox AI." });
-    } catch (error) {
-        res.status(500).json({ error: "Terjadi kesalahan dalam memproses permintaan." });
+    if (result) {
+        res.json({
+            status: succes,
+            prompt: prompt,
+            response: result.map(msg => ({
+                role: msg.role,
+                content: msg.content
+            }))
+        });
+    } else {
+        res.json({ creator: "Fajar Official", error: "Gagal mendapatkan respons dari Blackbox AI." });
     }
 });
 }
