@@ -72,7 +72,19 @@ app.get("/ai/blackbox", async (req, res) => {
 
     try {
         const result = await fetchBlackboxAI(prompt);
-        res.json({ prompt, response: result });
+
+        // Format respons agar lebih rapi
+        if (result.messages) {
+            return res.json({
+                prompt: prompt,
+                response: result.messages.map((msg) => ({
+                    role: msg.role,
+                    content: msg.content
+                }))
+            });
+        }
+
+        res.json({ error: "Tidak ada respons dari Blackbox AI." });
     } catch (error) {
         res.status(500).json({ error: "Terjadi kesalahan dalam memproses permintaan." });
     }
