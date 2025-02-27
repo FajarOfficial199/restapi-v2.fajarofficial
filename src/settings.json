@@ -41,6 +41,11 @@
           "path": "/downloader/mediafire?url="
         },
         {
+          "name": "Youtube",
+          "desc": "Yotube Downloader With [ TYPE & QUALITY ]",
+          "path": "/downloader/youtube?url=&type=&quality="
+        },
+        {
           "name": "Sfile Mobile",
           "desc": "Sfile Mobile Downloader",
           "path": "/downloader/sfile?url="
