@@ -1,0 +1,212 @@
+{
+  "name": "Fajar Official Api's",
+  "version": "Fajar UI",
+  "description": "Simple and Easy-to-Use API Documentation",
+  "header": {
+    "status": "Online!",
+    "imageSrc": [
+      ""
+    ],
+    "imageSize": {
+      "mobile": "80%",
+      "tablet": "40%",
+      "desktop": "40%"
+    }
+  },
+  "apiSettings": {
+    "creator": "Fajar Official"
+  },
+  "links": [
+    {
+      "name": "Source Code",
+      "url": "https://github.com/rynxzyy/Rynn-UI"
+    },
+    {
+      "name": "Contact Me",
+      "url": "https://wa.me/6285173370004"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Downloader",
+      "items": [
+        {
+          "name": "Xnxx",
+          "desc": "Xnxx Download",
+          "path": "/downloader/xnxx?url="
+        },
+        {
+          "name": "MediaFire",
+          "desc": "Mediafire Download",
+          "path": "/downloader/mediafire?url="
+        },
+        {
+          "name": "Sfile Mobile",
+          "desc": "Sfile Mobile Downloader",
+          "path": "/downloader/sfile?url="
+        },
+        {
+          "name": "Twitter",
+          "desc": "Twitter Downloader",
+          "path": "/downloader/twitter?url="
+        },
+        {
+          "name": "Capcut",
+          "desc": "Capcut Downloader",
+          "path": "/downloader/capcut?url="
+        },
+        {
+          "name": "Tiktok",
+          "desc": "Tiktok Downloader",
+          "path": "/downloader/tiktok?url="
+        },
+        {
+          "name": "Instragam",
+          "desc": "Instragam Downloader",
+          "path": "/downloader/igdl?url="
+        },
+        {
+          "name": "Facebook",
+          "desc": "Facebook Downloader",
+          "path": "/downloader/facebook?url="
+        },
+        {
+          "name": "Spotify",
+          "desc": "Spotify Downloader",
+          "path": "/downloader/spotify?url="
+        }
+      ]
+    },
+    {
+      "name": "Islamic",
+      "items": [
+{
+        "name": "Niat Sholat Maghrib",
+        "desc": "Endpoint untuk mendapatkan niat sholat Maghrib",
+        "path": "/api/islam/niatmaghrib"
+    },
+    {
+        "name": "Niat Sholat Isya",
+        "desc": "Endpoint untuk mendapatkan niat sholat Isya",
+        "path": "/api/islam/niatisya"
+    },
+    {
+        "name": "Niat Sholat Ashar",
+        "desc": "Endpoint untuk mendapatkan niat sholat Ashar",
+        "path": "/api/islam/niatashar"
+    },
+    {
+        "name": "Niat Sholat Subuh",
+        "desc": "Endpoint untuk mendapatkan niat sholat Subuh",
+        "path": "/api/islam/niatsubuh"
+    },
+    {
+        "name": "Niat Sholat Dzuhur",
+        "desc": "Endpoint untuk mendapatkan niat sholat Dzuhur",
+        "path": "/api/islam/niatdzuhur"
+    },
+    {
+        "name": "Niat Sholat Lengkap",
+        "desc": "Endpoint untuk mendapatkan semua niat sholat wajib",
+        "path": "/api/islam/niatshalat"
+    }
+      ]
+    },
+   {
+      "name": "AI (Artificial Intelligence)",
+      "items": [
+        {
+          "name": "Chatgpt [ Openai ]",
+          "desc": "Chatpt openai",
+          "path": "/ai/chatgpt?text="
+        },
+        {
+          "name": "LuminAI",
+          "desc": "Talk with luminai",
+          "path": "/ai/luminai?text="
+        },
+        {
+          "name": "HydroMind",
+          "desc": "Talk with hydromind",
+          "path": "/ai/hydromind?text=&model=",
+          "innerDesc": "See the list of supported AI models here: https://mind.hydrooo.web.id"
+        }
+      ]
+    },
+    {
+      "name": "Random",
+      "items": [
+        {
+          "name": "Blue Archive",
+          "desc": "Blue Archive Random Images",
+          "path": "/random/ba"
+        }
+      ]
+    },
+    {
+      "name": "Search Tools",
+      "items": [
+        {
+          "name": "Playstore",
+          "desc": "Playstore Search",
+          "path": "/search/playstore?nama="
+        },
+        {
+          "name": "YouTube",
+          "desc": "Video search",
+          "path": "/search/youtube?q="
+        },
+        {
+          "name": "Instragam",
+          "desc": "Instragam Search",
+          "path": "/search/ig?query="
+        },
+        {
+          "name": "Tiktok",
+          "desc": "Tiktok Search",
+          "path": "/search/tiktok?username="
+        },
+        {
+          "name": "Spotify",
+          "desc": "Spotify Search",
+          "path": "/search/spotify?q=&apikey"
+        }
+      ]
+    },
+    {
+      "name": "Stalker",
+      "items": [
+        {
+          "name": "Npm",
+          "desc": "Npm Stalker",
+          "path": "/stalker/npm?package="
+        },
+        {
+          "name": "Github",
+          "desc": "Github Stalker",
+          "path": "/stalker/github?username="
+        },
+        {
+          "name": "Tiktok",
+          "desc": "Tiktok Stalker",
+          "path": "/stalker/tiktok?username="
+        }
+      ]
+    },
+    {
+      "name": "Status Game Server",
+      "items": [
+        {
+          "name": "Gta SanAndreas Samp",
+          "desc": "Status Samp Server",
+          "path": "/status/server/samp?ip=&port="
+       },
+       {
+          "name": "Minecraft",
+          "desc": "Status Server Minecraft",
+          "path": "/status/server/minecraft?host=&port="
+        }
+      ]
+    }
+  ]
+}
