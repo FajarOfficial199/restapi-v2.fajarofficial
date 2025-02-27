@@ -114,6 +114,11 @@
         "name": "Niat Sholat Lengkap",
         "desc": "Endpoint untuk mendapatkan semua niat sholat wajib",
         "path": "/api/islam/niatshalat"
+    },
+    {
+        "name": "Jadwal Sholat",
+        "desc": "GET JadwalSholat",
+        "path": "/islam/jadwalsholat?kota="
     }
       ]
     },
