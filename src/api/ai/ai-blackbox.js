@@ -87,7 +87,7 @@ app.get("/ai/blackbox", async (req, res) => {
 
     if (result) {
         res.json({
-            status: succes,
+            status: "succes",
             prompt: prompt,
             response: result.map(msg => ({
                 role: msg.role,
