@@ -179,7 +179,12 @@
         {
           "name": "Spotify",
           "desc": "GET Spotify Search",
-          "path": "/search/spotify?q=&apikey"
+          "path": "/search/spotify?q="
+        },
+        {
+          "name": "Google",
+          "desc": "GET Google Search",
+          "path": "/search/google?q="
         }
       ]
     },
