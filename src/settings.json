@@ -31,6 +31,11 @@
       "name": "Downloader",
       "items": [
         {
+          "name": "PornHub",
+          "desc": "GET Pornhub Downloader",
+          "path": "/downloader/pornhub?url="
+        },
+        {
           "name": "Xnxx",
           "desc": "GET Xnxx Download",
           "path": "/downloader/xnxx?url="
