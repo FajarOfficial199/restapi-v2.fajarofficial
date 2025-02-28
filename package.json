@@ -16,6 +16,7 @@
     "@bochilteam/scraper": "^5.0.1",
     "puppeteer": "^21.8.2",
     "tiktokdl": "^0.0.5",
+    "@justalk/pornhub-api": "^3.5.0",
     "google-sr": "^5.0.0",
     "cors": "^2.8.5",
     "mongoose": "^5.13.5",
