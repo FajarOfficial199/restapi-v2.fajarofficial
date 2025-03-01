@@ -225,6 +225,11 @@
           "name": "Tiktok",
           "desc": "GET Tiktok Stalker",
           "path": "/stalker/tiktok?username="
+        },
+        {
+          "name": "Free Fire",
+          "desc": "GET Free Fire Stalker",
+          "path": "/stalker/game/freefire?id="
         }
       ]
     },
