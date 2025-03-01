@@ -54,6 +54,7 @@ app.get("/downloader/ytmp4", async (req, res) => {
 
         const info = await getInfo(url);
         const video = await mp4(url);
+        console.log(data);
 
         res.json({
             success: true,
