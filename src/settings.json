@@ -31,11 +31,6 @@
       "name": "Downloader",
       "items": [
         {
-          "name": "PornHub",
-          "desc": "GET Pornhub Downloader",
-          "path": "/downloader/pornhub?url="
-        },
-        {
           "name": "Xnxx",
           "desc": "GET Xnxx Download",
           "path": "/downloader/xnxx?url="
@@ -46,7 +41,7 @@
           "path": "/downloader/mediafire?url="
         },
         {
-          "name": "Youtube With [ MP4 & MP3 & QUALITY ]",
+          "name": "Youtube With [ MP4 & VIDEO & QUALITY ]",
           "desc": "GET Yotube Downloader With [ MP3 & MP4 & QUALITY ] selection",
           "path": "/downloader/youtube?url=&type=&quality="
         },
