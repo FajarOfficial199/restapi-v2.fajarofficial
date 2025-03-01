@@ -44,7 +44,7 @@ module.exports = function (app) {
     let petExp = tr[22].split(': ')[1] || 'doesnt have pet.'
     let starMarked = tr[23].split(': ')[1] || 'doesnt have pet.'
     let selected = tr[24].split(': ')[1] || 'doesnt have pet.'
-    let guild = tr[26]
+    let guildId = tr[30].split(': ')[1] || 'doesnt have guild'
     let equippedItems = []
     $('.equipped-items').find('.equipped-item').each((i,e) => {
         let name = $(e).find('p').text().trim()
@@ -78,7 +78,12 @@ module.exports = function (app) {
             starMarked,
             selected
         },
-        guild,
+        guild: {
+            name: guildName,
+            level: guildLevel,
+            members: guildMembers,
+            id: guildId
+        },
         equippedItems
     }
         }
