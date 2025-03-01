@@ -2,12 +2,12 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const FormData = require('form-data');
 
-module.exports = function (app) {
 /**
  * Get Free Fire account info
  * @param {string} id 
  * @returns {Promise<Object>}
  */
+module.exports = function (app) {
 async function ffStalk(id) {
     let formdata = new FormData();
     formdata.append('uid', id);
