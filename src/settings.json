@@ -41,7 +41,7 @@
           "path": "/downloader/mediafire?url="
         },
         {
-          "name": "Youtube With [ MP4 & VIDEO & QUALITY ]",
+          "name": "Youtube With [ MP3 & VIDEO & QUALITY ]",
           "desc": "GET Yotube Downloader With [ MP3 & MP4 & QUALITY ] selection",
           "path": "/downloader/youtube?url=&type=&quality="
         },
