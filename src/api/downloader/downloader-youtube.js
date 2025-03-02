@@ -62,7 +62,7 @@ async function downloadYouTube(link, format) {
 
     const downloadRes = await request(`https://${cdn}${apiDownload}`, {
       id: youtubeID[1],
-      downloadType: format === 'mp3' ? 'audio' : 'video',
+      downloadType: format === 'mp3' ? 'audio' : 'video' : 'mp4',
       quality: format,
       key: decrypted.key
     });
