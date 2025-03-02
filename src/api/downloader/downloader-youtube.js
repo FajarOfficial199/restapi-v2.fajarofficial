@@ -62,7 +62,7 @@ async function downloadYouTube(link, format) {
 
     const downloadRes = await request(`https://${cdn}${apiDownload}`, {
       id: youtubeID[1],
-      downloadType: format === 'mp3' ? 'audio' : 'video' : 'mp4',
+      downloadType: format === 'mp3' : 'mp4' ? 'audio' : 'video',
       quality: format,
       key: decrypted.key
     });
@@ -71,7 +71,7 @@ async function downloadYouTube(link, format) {
       status: true,
       result: {
         title: decrypted.title || "Tidak diketahui",
-        type: format === 'mp3' ? 'audio' : 'video',
+        type: format === 'mp3' : 'mp4' ? 'audio' : 'video',
         format: format,
         download: downloadRes.data.data.downloadUrl
       }
