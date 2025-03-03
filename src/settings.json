@@ -51,7 +51,7 @@
           "path": "/downloader/sfile?url="
         },
         {
-          "name": "Twitter",
+          "name": "Twitter ( X )",
           "desc": "GET Twitter Downloader",
           "path": "/downloader/twitter?url="
         },
