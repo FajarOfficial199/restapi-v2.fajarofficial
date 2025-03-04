@@ -4,6 +4,18 @@ const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
 const startTime = Date.now();
+const runtime = function (seconds = process.uptime()) {
+    seconds = Number(seconds);
+    var d = Math.floor(seconds / (3600 * 24));
+    var h = Math.floor((seconds % (3600 * 24)) / 3600);
+    var m = Math.floor((seconds % 3600) / 60);
+    var s = Math.floor(seconds % 60);
+    var dDisplay = d > 0 ? d + "d " : "";
+    var hDisplay = h > 0 ? h + "h " : "";
+    var mDisplay = m > 0 ? m + "m " : "";
+    var sDisplay = s > 0 ? s + "s" : "";
+    return dDisplay + hDisplay + mDisplay + sDisplay;
+};
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -65,13 +77,12 @@ app.get('/', (req, res) => {
 });
 
 app.get("/info/status", (req, res) => {
-    const uptime = Date.now() - startTime; // Hitung runtime dalam ms
     res.json({
         Status: "success",
         result: {
             Status: "Active",
             "Total Fitur": totalRoutes, // Menggunakan totalRoutes dari index.js
-            runtime: `${uptime} ms`
+            runtime: runtime(process.uptime()) // Format runtime yang lebih mudah dibaca
         }
     });
 });
