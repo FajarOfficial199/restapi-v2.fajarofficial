@@ -1,7 +1,6 @@
 const SampQuery = require('samp-query');
 
-module.exports = function(app) {
-    async function getServerStatus(ip, port) {
+async function getServerStatus(ip, port) {
     return new Promise((resolve, reject) => {
         const options = {
             host: ip,
@@ -36,6 +35,8 @@ module.exports = function(app) {
         });
     });
 }
+
+module.exports = function(app) {
     app.get('/status/server/samp', async (req, res) => {
     const { ip, port } = req.query;
 
