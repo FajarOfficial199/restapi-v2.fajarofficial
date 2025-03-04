@@ -172,6 +172,11 @@
       "name": "Searching",
       "items": [
         {
+          "name": "Github",
+          "desc": "GET Github Search",
+          "path": "/search/github?q="
+        },
+        {
           "name": "Playstore",
           "desc": "GET Playstore Search",
           "path": "/search/playstore?nama="
