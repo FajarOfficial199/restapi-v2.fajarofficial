@@ -28,6 +28,16 @@
   ],
   "categories": [
     {
+      "name": "STATUS ",
+      "items": [
+        {
+          "name": "STATUS",
+          "desc": "STATUS RESTAPI",
+          "path": "/info/status"
+        }
+      ]
+    },
+    {
       "name": "Downloader",
       "items": [
         {
