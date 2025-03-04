@@ -222,6 +222,11 @@
       "name": "Stalker",
       "items": [
         {
+          "name": "Clash Of Clans",
+          "desc": "GET Clash Of Clans Stalker",
+          "path": "/stalker/coc?tag="
+        },
+        {
           "name": "Npm",
           "desc": "GET Npm Stalker",
           "path": "/stalker/npm?package="
