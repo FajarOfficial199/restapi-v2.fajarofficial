@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
+const startTime = Date.now();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -61,6 +62,18 @@ console.log(chalk.bgHex('#90EE90').hex('#333').bold(` Total Routes Loaded: ${tot
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'api-page', 'index.html'));
+});
+
+app.get("/info/status", (req, res) => {
+    const uptime = Date.now() - startTime; // Hitung runtime dalam ms
+    res.json({
+        Status: "success",
+        result: {
+            Status: "Active",
+            "Total Fitur": totalRoutes, // Menggunakan totalRoutes dari index.js
+            runtime: `${uptime} ms`
+        }
+    });
 });
 
 
