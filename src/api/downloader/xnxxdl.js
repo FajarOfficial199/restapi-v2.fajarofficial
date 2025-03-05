@@ -15,7 +15,6 @@ module.exports = function(app) {
             }
 
             res.json({
-                Status: true,
                 results: result
             });
 
