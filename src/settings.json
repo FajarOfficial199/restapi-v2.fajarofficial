@@ -41,6 +41,11 @@
       "name": "Downloader",
       "items": [
         {
+          "name": "Videy",
+          "desc": "GET Videy Downloader",
+          "path": "/downloader/videy?url="
+        },
+        {
           "name": "Xnxx",
           "desc": "GET Xnxx Download",
           "path": "/downloader/xnxx?url="
