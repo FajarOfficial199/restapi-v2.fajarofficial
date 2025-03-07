@@ -246,11 +246,26 @@
     {
     "name": "NSFW",
       "items": [
-        {
-          "name": "Hentai-Neko",
-          "desc": "GET nsfw hentai-neko",
-          "path": "/nsfw/hentai-neko"
-        }
+    {
+        "name": "Hentai Neko",
+        "desc": "GET NSFW Hentai Neko",
+        "path": "/nsfw/hentai-neko"
+    },
+    {
+        "name": "Hentai Waifu",
+        "desc": "GET NSFW Hentai Waifu",
+        "path": "/nsfw/hentai-waifu"
+    },
+    {
+        "name": "Gasm",
+        "desc": "GET NSFW Gasm",
+        "path": "/nsfw/gasm"
+    },
+    {
+        "name": "Anime Spank",
+        "desc": "GET NSFW Anime Spank",
+        "path": "/nsfw/animespank"
+    }
       ]
     },
     {
