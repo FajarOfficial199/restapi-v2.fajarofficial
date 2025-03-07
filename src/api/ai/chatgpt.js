@@ -1,5 +1,13 @@
 const danz = require("d-scrape");
 
+const messages = {
+  error: {
+    status: 404,
+    developer: dev,
+    result: "Error, Service Unavailable",
+  },
+};
+
 module.exports = function (app) {
 app.get("/ai/chatgpt", async (req, res) => {
   const { query } = req.query;
