@@ -141,11 +141,6 @@
       "name": "AI (Artificial Intelligence)",
       "items": [
         {
-          "name": "Chatgpt [ Openai ]",
-          "desc": "GET Chatpt openai",
-          "path": "/ai/chatgpt?query="
-        },
-        {
           "name": "LuminAI",
           "desc": "GET Talk with luminai",
           "path": "/ai/luminai?text="
@@ -155,11 +150,6 @@
           "desc": "GET Talk with hydromind",
           "path": "/ai/hydromind?text=&model=",
           "innerDesc": "See the list of supported AI models here: https://mind.hydrooo.web.id"
-        },
-        {
-          "name": "Blackbox Ai",
-          "desc": "GET Blackbox AI",
-          "path": "/ai/blackbox?prompt="
         }
       ]
     },
@@ -250,6 +240,16 @@
           "name": "Free Fire",
           "desc": "GET Free Fire Stalker",
           "path": "/stalker/game/freefire?id="
+        }
+      ]
+    },
+    {
+    "name": "NSFW",
+      "items": [
+        {
+          "name": "Hentai-Neko",
+          "desc": "GET nsfw hentai-neko",
+          "path": "/nsfw/hentai-neko"
         }
       ]
     },
