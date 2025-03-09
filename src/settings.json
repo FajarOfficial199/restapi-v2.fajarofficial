@@ -182,6 +182,11 @@
       "name": "Searching",
       "items": [
         {
+          "name": "Happymod",
+          "desc": "GET Search Mod apk Di Happymod",
+          "path": "/search/happymod?q="
+        },
+        {
           "name": "XNXX Search",
           "desc": "GET Xnxx Search",
           "path": "/search/xnxxsearch?query="
