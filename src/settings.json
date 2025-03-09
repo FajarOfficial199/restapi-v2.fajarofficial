@@ -1,0 +1,337 @@
+{
+  "name": "Fajar Official Api's",
+  "version": "Fajar UI",
+  "description": "Simple and Easy-to-Use API Documentation",
+  "header": {
+    "status": "Online!",
+    "imageSrc": [
+      ""
+    ],
+    "imageSize": {
+      "mobile": "80%",
+      "tablet": "40%",
+      "desktop": "40%"
+    }
+  },
+  "apiSettings": {
+    "creator": "Fajar Official"
+  },
+  "links": [
+    {
+      "name": "Source Code",
+      "url": "https://wa.me/+6288211740019?text=*HALO*+FAJAR+GANTENG+BOLEH+MINTA+SOURCODE+SCRESTAPINYA?*"
+    },
+    {
+      "name": "Contact Me",
+      "url": "https://wa.me/6288211740019"
+    }
+  ],
+  "categories": [
+    {
+      "name": "STATUS ",
+      "items": [
+        {
+          "name": "STATUS",
+          "desc": "STATUS RESTAPI",
+          "path": "/info/status"
+        }
+      ]
+    },
+    {
+      "name": "Downloader",
+      "items": [
+      {
+          "name": "Google Drive",
+          "desc": "GET Google Drive Doenloader",
+          "path": "/downloader/gdrive?url="
+      },  
+      {
+          "name": "Terabox",
+          "desc": "GET Terabox Downloader",
+          "path": "/downloader/terabox?url="
+      },
+      {
+          "name": "AIO",
+          "desc": "GET All in One Downloader",
+          "path": "/downloader/aio?url="
+        },
+        {
+          "name": "Videy",
+          "desc": "GET Videy Downloader",
+          "path": "/downloader/videy?url="
+        },
+        {
+          "name": "Xnxx",
+          "desc": "GET Xnxx Download",
+          "path": "/downloader/xnxx?url="
+        },
+        {
+          "name": "MediaFire",
+          "desc": "GET Mediafire Download",
+          "path": "/downloader/mediafire?url="
+        },
+        {
+          "name": "Youtube With [ MP3 & VIDEO & QUALITY ]",
+          "desc": "GET Yotube Downloader With [ MP3 & MP4 & QUALITY ] selection",
+          "path": "/downloader/youtube?url=&type=&quality="
+        },
+        {
+          "name": "Sfile Mobile",
+          "desc": "GET Sfile Mobile Downloader",
+          "path": "/downloader/sfile?url="
+        },
+        {
+          "name": "Twitter ( X )",
+          "desc": "GET Twitter Downloader",
+          "path": "/downloader/twitter?url="
+        },
+        {
+          "name": "Capcut",
+          "desc": "GET Capcut Downloader",
+          "path": "/downloader/capcut?url="
+        },
+        {
+          "name": "Tiktok",
+          "desc": "GET Tiktok Downloader",
+          "path": "/downloader/tiktok?url="
+        },
+        {
+          "name": "Instragam",
+          "desc": "GET Instragam Downloader",
+          "path": "/downloader/igdl?url="
+        },
+        {
+          "name": "Facebook",
+          "desc": "GET Facebook Downloader",
+          "path": "/downloader/facebook?url="
+        },
+        {
+          "name": "Spotify",
+          "desc": "GET Spotify Downloader",
+          "path": "/downloader/spotify?url="
+        }
+      ]
+    },
+    {
+      "name": "Islamic",
+      "items": [
+{
+        "name": "Niat Sholat Maghrib",
+        "desc": "Endpoint untuk mendapatkan niat sholat Maghrib",
+        "path": "/api/islam/niatmaghrib"
+    },
+    {
+        "name": "Niat Sholat Isya",
+        "desc": "Endpoint untuk mendapatkan niat sholat Isya",
+        "path": "/api/islam/niatisya"
+    },
+    {
+        "name": "Niat Sholat Ashar",
+        "desc": "Endpoint untuk mendapatkan niat sholat Ashar",
+        "path": "/api/islam/niatashar"
+    },
+    {
+        "name": "Niat Sholat Subuh",
+        "desc": "Endpoint untuk mendapatkan niat sholat Subuh",
+        "path": "/api/islam/niatsubuh"
+    },
+    {
+        "name": "Niat Sholat Dzuhur",
+        "desc": "Endpoint untuk mendapatkan niat sholat Dzuhur",
+        "path": "/api/islam/niatdzuhur"
+    },
+    {
+        "name": "Niat Sholat Lengkap",
+        "desc": "Endpoint untuk mendapatkan semua niat sholat wajib",
+        "path": "/api/islam/niatshalat"
+    },
+    {
+        "name": "Jadwal Sholat",
+        "desc": "GET JadwalSholat",
+        "path": "/islam/jadwalsholat?kota="
+    }
+      ]
+    },
+   {
+      "name": "AI (Artificial Intelligence)",
+      "items": [
+        {
+          "name": "LuminAI",
+          "desc": "GET Talk with luminai",
+          "path": "/ai/luminai?text="
+        },
+        {
+          "name": "HydroMind",
+          "desc": "GET Talk with hydromind",
+          "path": "/ai/hydromind?text=&model=",
+          "innerDesc": "See the list of supported AI models here: https://mind.hydrooo.web.id"
+        }
+      ]
+    },
+    {
+      "name": "Random",
+      "items": [
+        {
+          "name": "Blue Archive",
+          "desc": " GET Blue Archive Random Images",
+          "path": "/random/ba"
+        }
+      ]
+    },
+    {
+      "name": "Searching",
+      "items": [
+        {
+          "name": "XNXX Search",
+          "desc": "GET Xnxx Search",
+          "path": "/search/xnxxsearch?query="
+        },
+        {
+          "name": "Npm Search",
+          "desc": "GET Search npm nodejs",
+          "path": "/search/npmsearch?package="
+        },
+        {
+          "name": "Github",
+          "desc": "GET Github Search",
+          "path": "/search/github?q="
+        },
+        {
+          "name": "Playstore",
+          "desc": "GET Playstore Search",
+          "path": "/search/playstore?nama="
+        },
+        {
+          "name": "YouTube",
+          "desc": "GET Video search",
+          "path": "/search/youtube?q="
+        },
+        {
+          "name": "Instragam",
+          "desc": "GET Instragam Search",
+          "path": "/search/ig?query="
+        },
+        {
+          "name": "Tiktok",
+          "desc": "GET Tiktok Search",
+          "path": "/search/tiktok?username="
+        },
+        {
+          "name": "Spotify",
+          "desc": "GET Spotify Search",
+          "path": "/search/spotify?q="
+        },
+        {
+          "name": "Google",
+          "desc": "GET Google Search",
+          "path": "/search/google?q="
+        }
+      ]
+    },
+    {
+      "name": "INFO & BERITA",
+      "items": [
+        {
+          "name": "Berita Tentang Film",
+          "desc": "GET Berita film",
+          "path": "/berita/tentangfilm"
+        },
+        {
+          "name": "Jkt48 News",
+          "desc": "JKT48 News",
+          "path": "/info/jkt48news"
+        }
+      ]
+    },
+    {
+      "name": "Stalker",
+      "items": [
+        {
+          "name": "Clash Of Clans",
+          "desc": "GET Clash Of Clans Stalker",
+          "path": "/stalker/coc?tag="
+        },
+        {
+          "name": "Npm",
+          "desc": "GET Npm Stalker",
+          "path": "/stalker/npm?package="
+        },
+        {
+          "name": "Github",
+          "desc": "GET Github Stalker",
+          "path": "/stalker/github?username="
+        },
+        {
+          "name": "Tiktok",
+          "desc": "GET Tiktok Stalker",
+          "path": "/stalker/tiktok?username="
+        },
+        {
+          "name": "Free Fire",
+          "desc": "GET Free Fire Stalker",
+          "path": "/stalker/game/freefire?id="
+        }
+      ]
+    },
+    {
+    "name": "NSFW",
+      "items": [
+    {
+        "name": "Hentai Neko",
+        "desc": "GET NSFW Hentai Neko",
+        "path": "/nsfw/hentai-neko"
+    },
+    {
+        "name": "Hentai Waifu",
+        "desc": "GET NSFW Hentai Waifu",
+        "path": "/nsfw/hentai-waifu"
+    },
+    {
+        "name": "Gasm",
+        "desc": "GET NSFW Gasm",
+        "path": "/nsfw/gasm"
+    },
+    {
+        "name": "Anime Spank",
+        "desc": "GET NSFW Anime Spank",
+        "path": "/nsfw/animespank"
+    }
+    ]
+    },
+        {
+      "name": "Image Creator",
+      "items": [
+        {
+          "name": "Brat",
+          "desc": "GET Brat image",
+          "path": "/image/brat?text="
+        }
+      ]
+    },
+    {
+      "name": "Tools",
+      "items": [
+        {
+          "name": "Screenshot Web",
+          "desc": "GET Screenshot Web",
+          "path": "/tools/screenshot?url="
+        }
+      ]
+    },
+    {
+      "name": "Status Game Server",
+      "items": [
+        {
+          "name": "Gta SanAndreas Samp",
+          "desc": "GET Status Samp Server",
+          "path": "/status/server/samp?ip=&port="
+       },
+       {
+          "name": "Minecraft",
+          "desc": "GET Status Server Minecraft",
+          "path": "/status/server/minecraft?host=&port="
+        }
+      ]
+    }
+  ]
+}
