@@ -9,7 +9,7 @@ app.get('/search/sfile', async (req, res) => {
   }
 
   try {
-    const searchsfile = await viooapis.search.sfilesearch(query);
+    const searchsfile = await viooapis.search.sfileSearch(query);
 
     res.json({
       success: true,
