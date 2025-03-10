@@ -8,10 +8,6 @@ app.get('/downloader/sfile', async (req, res) => {
     return res.status(400).json({ error: "Silahkan masukkan URL Sfile" });
   }
 
-  if (!url.match(/sfile\.mobi/i)) {
-    return res.status(400).json({ error: "URL tidak valid! Pastikan URL dari sfile.mobi" });
-  }
-
   try {
     const result = await vioo.downloader.sfileDl(url);
 
