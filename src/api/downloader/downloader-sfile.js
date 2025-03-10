@@ -1,6 +1,6 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
-const vioo = require('vioo/apis')
+const vioo = require('@vioo/apis')
 
 module.exports = function (app) {
 app.get('/downloader/sfile', async (req, res) => {
