@@ -1,7 +1,7 @@
 const viooapis = require('@vioo/apis');
 
 module.exports = function (app) {
-app.get('/search/sfile', async (req, res) => {
+app.get('/downloader/sfile', async (req, res) => {
   const url = req.query.url;
 
   if (!url) {
