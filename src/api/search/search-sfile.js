@@ -4,7 +4,7 @@ module.exports = function (app) {
 app.get('/search/sfile', async (req, res) => {
   const query = req.query.q;
 
-  if (!url) {
+  if (!query) {
     return res.status(400).json({ error: 'Query tidak ditemukan dalam parameter' });
   }
 
