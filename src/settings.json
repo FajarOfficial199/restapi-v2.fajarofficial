@@ -182,6 +182,11 @@
       "name": "Searching",
       "items": [
         {
+          "name": "Sfile Search",
+          "desc": "GET Search File dll Di Sfile Mobile",
+          "path": "/search/sfile?q="
+        },
+        {
           "name": "Happymod",
           "desc": "GET Search Mod apk Di Happymod",
           "path": "/search/happymod?q="
