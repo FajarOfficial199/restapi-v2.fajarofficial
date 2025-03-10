@@ -13,7 +13,7 @@
     "@bochilteam/scraper": "^5.0.1",
     "@justalk/pornhub-api": "^3.5.0",
     "@mr.janiya/xnxx-scraper": "^1.0.0",
-    "@vioo/apis": "^1.4.2",
+    "@vioo/apis": "^1.4.25",
     "api-dylux": "^1.8.5",
     "axios": "^1.6.8",
     "request": "^2.88.2",
