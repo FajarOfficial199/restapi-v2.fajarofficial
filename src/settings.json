@@ -41,6 +41,11 @@
       "name": "Downloader",
       "items": [
       {
+        "name": "SnackVideo",
+        "desc": "GET Snackvideo Download",
+        "path": "/downloader/snackvideo?url="
+      },
+      {
           "name": "Google Drive",
           "desc": "GET Google Drive Doenloader",
           "path": "/downloader/gdrive?url="
