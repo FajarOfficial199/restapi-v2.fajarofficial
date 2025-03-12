@@ -13,7 +13,7 @@ class SnackVideo {
         $("script").each((_, a) => {
             data.push($(a).html());
         });
-        return data[5]; // Ambil script yang mengandung data video
+        return data[5]; // Ambil script yang mengandung metadata video
     }
 
     decodeUnicode(str) {
@@ -23,10 +23,21 @@ class SnackVideo {
     async fetchData() {
         try {
             const { data: html } = await axios.get(this.url);
-            const getScript = this.getScript(html);
+            const scriptData = this.getScript(html);
 
-            const _contentUrl = getScript.split('contentUrl:"');
-            return this.decodeUnicode(_contentUrl[1].split('",commentUrl:"')[0]);
+            const videoUrl = scriptData.match(/contentUrl:"(.*?)"/)?.[1] || null;
+            const audioUrl = scriptData.match(/audio":{"name":".*?","contentUrl":"(.*?)"/)?.[1] || null;
+            const image = scriptData.match(/image":"(.*?)"/)?.[1] || null;
+            const duration = scriptData.match(/duration":"(.*?)"/)?.[1] || null;
+            const description = scriptData.match(/description":"(.*?)"/)?.[1] || null;
+
+            return {
+                video_url: videoUrl ? this.decodeUnicode(videoUrl) : null,
+                audio_url: audioUrl ? this.decodeUnicode(audioUrl) : null,
+                image: image ? this.decodeUnicode(image) : null,
+                duration: duration ? this.decodeUnicode(duration) : null,
+                description: description ? this.decodeUnicode(description) : null,
+            };
         } catch (error) {
             throw new Error("Gagal mengambil data dari SnackVideo.");
         }
@@ -42,14 +53,13 @@ app.get("/downloader/snackvideo", async (req, res) => {
 
     try {
         const snackVideo = new SnackVideo(url);
-        const videoUrl = await snackVideo.fetchData();
+        const data = await snackVideo.fetchData();
 
         res.json({
             status: "success",
-            video_url: videoUrl,
+            ...data,
         });
     } catch (error) {
-        console.error(error);
         res.status(500).json({ error: "Terjadi kesalahan saat memproses link SnackVideo." });
     }
 });
