@@ -81,7 +81,7 @@ app.get("/info/status", (req, res) => {
         Status: "success",
         result: {
             Status: "Active",
-            "Total Fitur": totalRoutes, // Menggunakan totalRoutes dari index.js
+            TotalFitur: totalRoutes, // Menggunakan totalRoutes dari index.js
             runtime: runtime(process.uptime()) // Format runtime yang lebih mudah dibaca
         }
     });
