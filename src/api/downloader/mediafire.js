@@ -46,6 +46,6 @@ app.get('/downloader/mediafire', async (req, res) => {
   }
 
   const result = await mediaFire(url);
-  res.json(result);
+  res.json({ results: result });
 });
 }
