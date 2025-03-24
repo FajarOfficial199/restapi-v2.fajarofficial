@@ -234,7 +234,7 @@
         {
           "name": "Spotify",
           "desc": "GET Spotify Search",
-          "path": "/search/spotify?q="
+          "path": "/search/spotify?query="
         },
         {
           "name": "Google",
