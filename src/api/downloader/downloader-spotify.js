@@ -1,49 +1,38 @@
 const axios = require('axios');
 
 module.exports = function (app) {
-async function spotidown(url) {
+async function spotify(url) {
     try {
-        console.log(`🔍 Fetching data from: ${url}`);
-
-        const response = await axios.post('https://spotymate.com/api/download-track',
-            { url: url },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36',
-                    'Referer': 'https://spotymate.com/'
-                }
-            }
-        );
-
-        if (response.data && response.data.file_url) {
-            return {
-                status: true,
-                file_url: response.data.file_url
-            };
-        } else {
-            return {
-                status: false,
-                message: '❌ Tidak dapat menemukan link unduhan!'
-            };
+        const hai = await axios.get(`https://api.fabdl.com/spotify/get?url=${encodeURIComponent(url)}`);
+        if (!hai.data.result || !hai.data.result.gid || !hai.data.result.id) {
+            throw new Error('Data tidak valid dari API');
         }
-    } catch (error) {
-      console.log(error)
+
+        const hao = await axios.get(`https://api.fabdl.com/spotify/mp3-convert-task/${hai.data.result.gid}/${hai.data.result.id}`);
+        if (!hao.data.result || !hao.data.result.download_url) {
+            throw new Error('Gagal mendapatkan link download');
+        }
+
         return {
-            status: false,
-            message: `❌ Error: ${error.message}`
+            title: hai.data.result.name,
+            download: `https://api.fabdl.com${hao.data.result.download_url}`,
+            image: hai.data.result.image,
+            duration: hai.data.result.duration_ms
         };
+    } catch (err) {
+        throw new Error(err.message);
     }
 }
 
 app.get('/downloader/spotify', async (req, res) => {
     const url = req.query.url;
+    if (!url) return res.status(400).json({ error: 'Parameter url diperlukan' });
 
-    if (!url) {
-        return res.status(400).json({ status: false, message: '❌ URL Spotify diperlukan!' });
+    try {
+        const results = await spotify(url);
+        res.json({ success: true, results });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
     }
-
-    const result = await spotidown(url);
-    res.json(result);
 });
 }
