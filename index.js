@@ -1,4 +1,4 @@
-const setting = require('./src/settings.js')
+const setting = require('./src/maintance.js')
 const express = require('express');
 const chalk = require('chalk');
 const fs = require('fs');
