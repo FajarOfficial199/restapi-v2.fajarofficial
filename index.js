@@ -1,3 +1,4 @@
+const setting = require('./src/settings.js')
 const express = require('express');
 const chalk = require('chalk');
 const fs = require('fs');
@@ -85,6 +86,18 @@ app.get("/info/status", (req, res) => {
             runtime: runtime(process.uptime()) // Format runtime yang lebih mudah dibaca
         }
     });
+});
+
+app.use((req, res, next) => {
+  if (settings.maintenance.enabled) {
+    // Jika request ke API, kirim response JSON
+    if (req.originalUrl.startsWith("/api")) {
+      return res.status(503).json(settings.maintenance.apiResponse);
+    }
+    // Jika request ke halaman web, arahkan ke maintenance.html
+    return res.sendFile(path.join(__dirname, "api-page", "maintance.html"));
+  }
+  next();
 });
 
 
