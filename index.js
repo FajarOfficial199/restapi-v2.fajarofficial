@@ -29,6 +29,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use('/', express.static(path.join(__dirname, 'api-page')));
+app.use(express.static(path.join(__dirname, "api-page")));
 app.use('/src', express.static(path.join(__dirname, 'src')));
 
 const settingsPath = path.join(__dirname, './src/settings.json');
@@ -89,12 +90,12 @@ app.get("/info/status", (req, res) => {
 });
 
 app.use((req, res, next) => {
-  if (settings.maintenance.enabled) {
-    // Jika request ke API, kirim response JSON
+  if (setting.maintenance.enabled) {
+    // Jika request API, kirim response JSON
     if (req.originalUrl.startsWith("/api")) {
-      return res.status(503).json(settings.maintenance.apiResponse);
+      return res.status(503).json(setting.maintenance.apiResponse);
     }
-    // Jika request ke halaman web, arahkan ke maintenance.html
+    // Jika request halaman web atau file lain, selalu arahkan ke maintenance.html
     return res.sendFile(path.join(__dirname, "api-page", "maintance.html"));
   }
   next();
