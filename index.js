@@ -34,6 +34,7 @@ app.use('/src', express.static(path.join(__dirname, 'src')));
 
 const settingsPath = path.join(__dirname, './src/settings.json');
 const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'));
+global.apikey = settings.apiSettings.apikey
 
 app.use((req, res, next) => {
     const originalJson = res.json;
