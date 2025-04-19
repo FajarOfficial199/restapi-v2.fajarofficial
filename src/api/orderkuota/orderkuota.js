@@ -6,6 +6,7 @@ const QRCode = require('qrcode');
 const bodyParser = require('body-parser');
 const { ImageUploadService } = require('node-upload-images')
 
+module.exports = function(app) {
 function convertCRC16(str) {
     let crc = 0xFFFF;
     const strlen = str.length;
@@ -136,7 +137,6 @@ async function checkQRISStatus() {
     }
 }
 
-module.exports = function(app) {
 app.get('/orderkuota/createpayment', async (req, res) => {
     const { apikey, amount, codeqr} = req.query;
     const check = global.apikey
@@ -199,5 +199,4 @@ app.get('/orderkuota/ceksaldo', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 })
-
 }
