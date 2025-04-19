@@ -14,7 +14,8 @@
     }
   },
   "apiSettings": {
-    "creator": "Fajar Official"
+    "creator": "Fajar Official",
+    "apikey": ["fajaroffc"]
   },
   "links": [
     {
