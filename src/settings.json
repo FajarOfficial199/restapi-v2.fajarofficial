@@ -39,12 +39,22 @@
       ]
     },
     {
-      "name": "ORDER KUOTA ",
+      "name": "PAYMENT GATEWAY ORDER KUOTA ",
       "items": [
         {
-          "name": "CreatePaymenT",
+          "name": "CreatePayment",
           "desc": "CreatePayment OrderKuota",
           "path": "/orderkuota/createpayment?apikey=&amount&codeqr="
+        },
+        {
+          "name": "Cek Saldo",
+          "desc": "GET Ceksaldo Orderkuota",
+          "path": "/orderkuota/ceksaldo?merchant=&keyorkut=&apikey="
+       }
+        {
+          "name": "Cek Status",
+          "desc": "GET Cek Status Orderkuota",
+          "path": "/orderkuota/cekstatus?merchant=&keyorkut=&apikey="
         }
       ]
     },
