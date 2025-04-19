@@ -39,6 +39,16 @@
       ]
     },
     {
+      "name": "ORDER KUOTA ",
+      "items": [
+        {
+          "name": "CreatePaymenT",
+          "desc": "CreatePayment OrderKuota",
+          "path": "/orderkuota/createpayment?apikey=&amount&codeqr="
+        }
+      ]
+    },
+    {
       "name": "Downloader",
       "items": [
       {
