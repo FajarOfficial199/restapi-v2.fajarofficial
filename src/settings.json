@@ -50,7 +50,7 @@
           "name": "Cek Saldo",
           "desc": "GET Ceksaldo Orderkuota",
           "path": "/orderkuota/ceksaldo?merchant=&keyorkut=&apikey="
-       }
+       },
         {
           "name": "Cek Status",
           "desc": "GET Cek Status Orderkuota",
