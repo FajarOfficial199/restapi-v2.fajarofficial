@@ -18,6 +18,7 @@
     "axios": "^1.6.8",
     "form-data": "^4.0.1",
     "request": "^2.88.2",
+    "free-fire-apis": "^0.0.1",
     "bing-translate-api": "^4.0.2",
     "body-parser": "^1.20.3",
     "chalk": "^4.1.2",
