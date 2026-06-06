@@ -39,6 +39,16 @@
       ]
     },
     {
+      "name": "API TOPUPKU",
+      "items": [
+        {
+          "name": "Profile",
+          "desc": "Profile Akun Topupku",
+          "path": "/api/topupku/profile?api_id=&api_key="
+        }
+      ]
+    }
+    {
       "name": "PAYMENT GATEWAY ORDER KUOTA ",
       "items": [
         {
